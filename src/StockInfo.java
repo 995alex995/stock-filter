@@ -12,3 +12,6 @@ public class StockInfo {
 		return ticker + " " + price + ", ";
 	}
 }
+
+
+// Copyright (c) alex#59, 2019

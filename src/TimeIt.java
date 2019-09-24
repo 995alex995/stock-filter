@@ -11,3 +11,6 @@ public class TimeIt {
 		}
 	}
 }
+
+
+// Copyright (c) alex#59, 2019

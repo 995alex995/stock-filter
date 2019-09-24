@@ -1,7 +1,12 @@
 
+import java.io.File;
+import java.io.IOException;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
+import org.apache.commons.io.FileUtils;
 
 public class MakeMeRich {
 	public static final List<String> symbols = Arrays.asList("AMD", "HPQ",
@@ -9,6 +14,15 @@ public class MakeMeRich {
 			"SNE", "GOOG", "INTC", "INTU", "MSFT", "ORCL", "TIBX", "VRSN",
 			"YHOO");
 
+	public static void setCopyright() {
+		try {
+			for (File f : FileUtils.listFiles(new File("src"), new String[] { "java" }, true))
+					FileUtils.write(f, "\n\n// Copyright (c) alex#59, " + LocalDate.now().getYear(), "UTF-8", true);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
 	public static void main(String[] args) {
 
 		// 1. Print these symbols using a Java 8 for-each and lambdas
@@ -23,6 +37,11 @@ public class MakeMeRich {
 	// 4. Find the highest-priced stock under $500
 	StockInfo HP = list.stream().filter(StockUtil.isPriceLessThan(500)).reduce(StockUtil::pickHigh).get();
 	System.out.println("The highest priced stock under 500 dollars is " +HP);
+	
+	setCopyright();
 	}
 
 }
+
+
+// Copyright (c) alex#59, 2019
