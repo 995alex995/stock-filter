@@ -42,5 +42,4 @@ public class MakeMeRich {
 	}
 
 }
-
 // Copyright (c) alex#59

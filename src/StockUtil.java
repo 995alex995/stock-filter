@@ -44,5 +44,4 @@ public class StockUtil {
 		}
 	};
 }
-
 // Copyright (c) alex#59
