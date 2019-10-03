@@ -17,7 +17,7 @@ public class MakeMeRich {
 	public static void setCopyright() {
 		try {
 			for (File f : FileUtils.listFiles(new File("src"), new String[] { "java" }, true))
-					FileUtils.write(f, "\n\n// Copyright (c) alex#59, " + LocalDate.now().getYear(), "UTF-8", true);
+					FileUtils.write(f, "\n\n// Copyright (c) alex#59", "UTF-8", true);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -43,9 +43,4 @@ public class MakeMeRich {
 
 }
 
-
-// Copyright (c) alex#59, 2019
-
-// Copyright (c) alex#59, 2019
-
-// Copyright (c) alex#59, 2019
+// Copyright (c) alex#59

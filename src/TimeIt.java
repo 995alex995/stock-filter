@@ -12,5 +12,4 @@ public class TimeIt {
 	}
 }
 
-
-// Copyright (c) alex#59, 2019
+// Copyright (c) alex#59
