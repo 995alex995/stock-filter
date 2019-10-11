@@ -16,7 +16,11 @@ public class StockUtil {
 			final StockInfo stockInfo2) {
 		return stockInfo1.price > stockInfo2.price ? stockInfo1 : stockInfo2;
 	}
-
+	
+	public static void Stock(StockInfo info) {
+		prices.put(info.ticker, info.price);
+	}
+	
 	static Map<String, Double> prices = new HashMap<String, Double>() {
 		{
 			put("AMD", 3.28);
@@ -44,4 +48,3 @@ public class StockUtil {
 		}
 	};
 }
-// Copyright (c) alex#59
